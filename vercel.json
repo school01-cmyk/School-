@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "builds": [
+    {"src": "index (1).html", "use": "@vercel/static"},
+    {"src": "teacher.html", "use": "@vercel/static"},
+    {"src": "data (1).js", "use": "@vercel/node"}
+  ],
+  "routes": [
+    {"handle": "filesystem"},
+    {"src": "/api/data", "dest": "/data (1).js"},
+    {"src": "/", "dest": "/index (1).html"}
+  ]
+}
